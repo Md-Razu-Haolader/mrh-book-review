@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MRH\BookReview\Admin\Interfaces;
+namespace MRH\BookReview\Custom\Interfaces;
 
 interface Taxonomy
 {

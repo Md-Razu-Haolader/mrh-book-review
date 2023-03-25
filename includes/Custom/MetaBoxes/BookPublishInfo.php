@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MRH\BookReview\Admin\MetaBoxes;
+namespace MRH\BookReview\Custom\MetaBoxes;
 
 use MRH\BookReview\Helpers\Template;
 
@@ -80,7 +80,7 @@ class BookPublishInfo
     public function render(object $post): void
     {
         Template::render(
-            MRHBR_INCLUDES . '/Admin/views/book-pub-info-meta-form.php',
+            MRHBR_INCLUDES . '/Custom/views/book-pub-info-meta-form.php',
             [
                 'publisher' => get_post_meta($post->ID, 'mrhbr-book-publisher', true),
                 'publish_date' => get_post_meta($post->ID, 'mrhbr-book-publish-date', true)

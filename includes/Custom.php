@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace MRH\BookReview;
 
-/**
- * Auth handler class
- */
-class Auth
+class Custom
 {
 
 
@@ -19,8 +16,9 @@ class Auth
     private function init_classes(): void
     {
         if ($this->has_user_edit_permission()) {
-            new Admin\MetaBoxHandler();
-            new Admin\TaxonomyRegister();
+            new Custom\MetaBoxHandler();
+            new Custom\PostTypeRegister();
+            new Custom\TaxonomyRegister();
         }
     }
 

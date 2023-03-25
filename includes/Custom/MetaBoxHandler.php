@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MRH\BookReview\Admin;
+namespace MRH\BookReview\Custom;
 
 class MetaBoxHandler
 {

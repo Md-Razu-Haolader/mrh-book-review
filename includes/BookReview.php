@@ -4,11 +4,6 @@ declare(strict_types=1);
 
 namespace MRH\BookReview;
 
-use MRH\BookReview\Activator;
-use MRH\BookReview\Frontend;
-use MRH\BookReview\Admin;
-
-
 final class BookReview
 {
 
@@ -90,11 +85,7 @@ final class BookReview
      */
     public function init_classes(): void
     {
-        if (is_admin()) {
-            new Admin();
-        } else {
-            new Frontend();
-        }
-        new Admin\PostTypeRegister();
+        new Frontend();
+        new Custom();
     }
 }

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace MRH\BookReview\Admin\Taxonomies;
+namespace MRH\BookReview\Custom\Taxonomies;
 
-use MRH\BookReview\Admin\Interfaces\Taxonomy;
+use MRH\BookReview\Custom\Interfaces\Taxonomy;
 
 class Genre implements Taxonomy
 {
