@@ -1,0 +1,19 @@
+{
+    "name": "razu/book-review",
+    "description": "A plugin to a custom post type and handles all the functionality related to that.",
+    "type": "wordpress-plugin",
+    "license": "GPL v2",
+    "authors": [
+        {
+            "name": "Md. Razu Haolader",
+            "email": "razu.cse129@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MRH\\BookReview\\": "includes/"
+        }
+    }
+}
