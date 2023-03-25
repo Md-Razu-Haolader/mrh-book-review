@@ -70,7 +70,6 @@ final class BookReview
     {
         register_activation_hook(__FILE__, [$this, 'activate']);
         add_action('plugins_loaded', [$this, 'init_classes']);
-        add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
     }
 
     /**
@@ -97,15 +96,5 @@ final class BookReview
             new Frontend();
         }
         new Admin\PostTypeRegister();
-    }
-
-    /**
-     * Includes the stylesheet
-     *
-     * @return void
-     */
-    public function enqueue_scripts(): void
-    {
-        wp_enqueue_style('mrhpe-styles', MRHBR_ASSETS . '/css/style.css', '', MRHBR_VERSION);
     }
 }
