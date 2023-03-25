@@ -40,21 +40,21 @@ class BookPublishInfo
      */
     public function save(int $post_id, object $post): void
     {
-
         if ($this->is_saveable($post_id, $post->post_type)) {
-            if ($this->is_valid_nonce() && isset($_POST['mrhbr-book-publisher']) && !empty($_POST['mrhbr-book-publisher'])) {
+            if ($this->is_valid_nonce() && isset($_POST['mrhbr_book_publisher']) && !empty($_POST['mrhbr_book_publisher'])) {
+
                 update_post_meta(
                     $post_id,
-                    'mrhbr-book-publisher',
-                    esc_html($_POST['mrhbr-book-publisher'])
+                    'mrhbr_book_publisher',
+                    esc_html($_POST['mrhbr_book_publisher'])
                 );
             }
 
-            if ($this->is_valid_nonce() && isset($_POST['mrhbr-book-publish-date']) && !empty($_POST['mrhbr-book-publish-date'])) {
+            if ($this->is_valid_nonce() && isset($_POST['mrhbr_book_publish_date']) && !empty($_POST['mrhbr_book_publish_date'])) {
                 update_post_meta(
                     $post_id,
-                    'mrhbr-book-publish-date',
-                    $_POST['mrhbr-book-publish-date']
+                    'mrhbr_book_publish_date',
+                    $_POST['mrhbr_book_publish_date']
                 );
             }
         }
@@ -67,7 +67,7 @@ class BookPublishInfo
 
     private function is_valid_nonce(): bool
     {
-        return wp_verify_nonce($_POST['book_publications_field'], basename(__FILE__)) !== false;
+        return wp_verify_nonce($_POST['book_publications_field'], 'book-pub-info-meta-form.php') !== false;
     }
 
     /**
@@ -82,8 +82,8 @@ class BookPublishInfo
         Template::render(
             MRHBR_INCLUDES . '/Custom/views/book-pub-info-meta-form.php',
             [
-                'publisher' => get_post_meta($post->ID, 'mrhbr-book-publisher', true),
-                'publish_date' => get_post_meta($post->ID, 'mrhbr-book-publish-date', true)
+                'publisher' => get_post_meta($post->ID, 'mrhbr_book_publisher', true),
+                'publish_date' => get_post_meta($post->ID, 'mrhbr_book_publish_date', true)
             ]
         );
     }

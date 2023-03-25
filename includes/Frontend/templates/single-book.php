@@ -18,8 +18,8 @@
 					the_post();
 					$post_id = get_the_ID();
 					get_template_part('template-parts/content/content', get_post_format());
-					$book_publisher = get_post_meta($post_id, 'mrhbr-book-publisher', true);
-					$book_published_date = get_post_meta($post_id, 'mrhbr-book-publish-date', true);
+					$book_publisher = get_post_meta($post_id, 'mrhbr_book_publisher', true);
+					$book_published_date = get_post_meta($post_id, 'mrhbr_book_publish_date', true);
 				?>
   				<div class="has-text-align-center">
   					<p>Book Publications: <?php echo $book_publisher; ?></p>
