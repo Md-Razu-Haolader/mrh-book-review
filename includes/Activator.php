@@ -7,23 +7,21 @@ namespace MRH\BookReview;
 /**
  * Plugin activator class.
  */
-class Activator
-{
+class Activator {
+
     /**
      * Runs the activator.
      *
      * @return void
      */
-    public function run()
-    {
+    public function run() {
         $this->add_plugin_info();
     }
 
     /**
      * Adds plugin info.
      */
-    public function add_plugin_info(): void
-    {
+    public function add_plugin_info(): void {
         $activated = get_option( 'mrhbr_installation_time' );
 
         if ( !$activated ) {

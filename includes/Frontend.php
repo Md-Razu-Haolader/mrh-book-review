@@ -7,13 +7,12 @@ namespace MRH\BookReview;
 /**
  * Frontend handler class.
  */
-class Frontend
-{
+class Frontend {
+
     /**
      * Frontend class constructor.
      */
-    public function __construct()
-    {
+    public function __construct() {
         new Frontend\Template();
     }
 }

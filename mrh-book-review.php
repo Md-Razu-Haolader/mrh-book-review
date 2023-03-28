@@ -33,7 +33,7 @@ if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
 
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 use MRH\BookReview\BookReview;
 
@@ -42,8 +42,7 @@ define( 'MRHBR_PATH', __DIR__ );
 /**
  * Initializes the main plugin.
  */
-function book_review(): BookReview
-{
+function book_review(): BookReview {
     return BookReview::instance();
 }
 
