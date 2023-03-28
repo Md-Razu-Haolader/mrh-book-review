@@ -41,8 +41,6 @@
         "phpunit": "./vendor/bin/phpunit --testdox",
         "fix-cs": "php-cs-fixer fix",
         "test-cs": "php-cs-fixer fix --dry-run -v",
-        "phpcs": "vendor/bin/phpcs",
-        "phpcwp": "./vendor/bin/phpcs -p . --standard=PHPCompatibilityWP",
         "test": ["@phpunit", "@test-cs"]
     }
 }
