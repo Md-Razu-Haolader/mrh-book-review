@@ -1,6 +1,6 @@
 <?php
 
-declare( strict_types=1 );
+declare(strict_types=1);
 
 namespace MRH\BookReview\Tests;
 
@@ -16,19 +16,19 @@ class TemplateHelperTest extends TestCase
         static::$template_helper = new TemplateHelper();
     }
 
-    public function testShouldRenderTemplateWhenValidPathGiven()
+    public function test_should_render_template_when_valid_path_given()
     {
         $this->expectNotToPerformAssertions();
         ob_start();
-        $file_path = MRHBR_INCLUDES.'/Frontend/templates/archive-book.php';
-        static::$template_helper->render( $file_path );
+        $file_path = MRHBR_INCLUDES . '/Frontend/templates/archive-book.php';
+        static::$template_helper->render($file_path);
         ob_get_clean();
     }
 
-    public function testShouldThrowErrorWhenInvalidPathGiven()
+    public function test_should_throw_error_when_invalid_path_given()
     {
-        $this->expectException( \RuntimeException::class );
-        $file_path = MRHBR_INCLUDES.'/Frontend/templates/test.php';
-        static::$template_helper->render( $file_path );
+        $this->expectException(\RuntimeException::class);
+        $file_path = MRHBR_INCLUDES . '/Frontend/templates/test.php';
+        static::$template_helper->render($file_path);
     }
 }
