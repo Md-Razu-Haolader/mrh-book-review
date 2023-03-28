@@ -1,17 +1,16 @@
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
 namespace MRH\BookReview;
 
 /**
- * Frontend handler class
+ * Frontend handler class.
  */
 class Frontend
 {
-
     /**
-     * Frontend class constructor
+     * Frontend class constructor.
      */
     public function __construct()
     {

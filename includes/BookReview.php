@@ -1,21 +1,20 @@
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
 namespace MRH\BookReview;
 
 final class BookReview
 {
-
     private static $instance;
 
-    const version = '1.0.0';
-    const domain    = 'mrh-book-review';
-    const post_type = 'book';
-    const taxonomy  = 'genre';
+    public const version = '1.0.0';
+    public const domain = 'mrh-book-review';
+    public const post_type = 'book';
+    public const taxonomy = 'genre';
 
     /**
-     * Private class constructor
+     * Private class constructor.
      */
     private function __construct()
     {
@@ -24,16 +23,15 @@ final class BookReview
     }
 
     /**
-     * Private class cloner
+     * Private class cloner.
      */
     private function __clone()
     {
     }
 
-
     public static function instance(): BookReview
     {
-        if (!isset(self::$instance)) {
+        if ( !isset( self::$instance ) ) {
             self::$instance = new self();
         }
 
@@ -41,36 +39,30 @@ final class BookReview
     }
 
     /**
-     * Defines the required constants
-     *
-     * @return void
+     * Defines the required constants.
      */
     public function define_constants(): void
     {
-        define('MRHBR_VERSION', self::version);
-        define('MRHBR_URL', plugins_url('', MRHBR_FILE));
-        define('MRHBR_ASSETS', MRHBR_URL . '/assets');
-        define('MRHBR_INCLUDES', MRHBR_PATH . '/includes');
-        define('MRHBR_DOMAIN', self::domain);
-        define('MRHBR_POST_TYPE', self::post_type);
-        define('MRHBR_TAXONOMY', self::taxonomy);
+        define( 'MRHBR_VERSION', self::version );
+        define( 'MRHBR_URL', plugins_url( '', MRHBR_FILE ) );
+        define( 'MRHBR_ASSETS', MRHBR_URL.'/assets' );
+        define( 'MRHBR_INCLUDES', MRHBR_PATH.'/includes' );
+        define( 'MRHBR_DOMAIN', self::domain );
+        define( 'MRHBR_POST_TYPE', self::post_type );
+        define( 'MRHBR_TAXONOMY', self::taxonomy );
     }
-    /**
-     * Initialize hooks
-     * 
-     * @return void
-     */
 
+    /**
+     * Initialize hooks.
+     */
     private function init_hooks(): void
     {
-        register_activation_hook(__FILE__, [$this, 'activate']);
-        add_action('plugins_loaded', [$this, 'init_classes']);
+        register_activation_hook( __FILE__, [$this, 'activate'] );
+        add_action( 'plugins_loaded', [$this, 'init_classes'] );
     }
 
     /**
-     * Updates info on plugin activation
-     *
-     * @return void
+     * Updates info on plugin activation.
      */
     public function activate(): void
     {
@@ -79,9 +71,7 @@ final class BookReview
     }
 
     /**
-     * Initializes the necessary classes for the plugin
-     *
-     * @return void
+     * Initializes the necessary classes for the plugin.
      */
     public function init_classes(): void
     {
