@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 /**
  * Plugin Name:       Book Review
  * Plugin URI:        razu.cse129@gmail.com
@@ -29,16 +29,16 @@ declare(strict_types=1);
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see the License URI.
  */
-if (!defined('ABSPATH')) {
+if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__.'/vendor/autoload.php';
 
 use MRH\BookReview\BookReview;
 
-define('MRHBR_FILE', __FILE__);
-define('MRHBR_PATH', __DIR__);
+define( 'MRHBR_FILE', __FILE__ );
+define( 'MRHBR_PATH', __DIR__ );
 /**
  * Initializes the main plugin.
  */

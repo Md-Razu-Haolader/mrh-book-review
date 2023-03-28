@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
 namespace MRH\BookReview\Tests;
 
@@ -16,9 +16,9 @@ class BookTest extends TestCase
         static::$book = new Book();
     }
 
-    public function test_should_add_book_post_type()
+    public function testShouldAddBookPostType()
     {
         static::$book->add_post_type();
-        $this->assertTrue(post_type_exists(MRHBR_POST_TYPE));
+        $this->assertTrue( post_type_exists( MRHBR_POST_TYPE ) );
     }
 }
