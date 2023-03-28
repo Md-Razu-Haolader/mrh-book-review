@@ -1,13 +1,13 @@
 <?php
 
-declare( strict_types=1 );
+declare(strict_types=1);
 /**
  * Plugin Name:       Book Review
  * Plugin URI:        razu.cse129@gmail.com
  * Description:       A plugin to a custom post type and handles all the functionality related to that.
  * Version:           1.0.0
  * Requires at least: 6.1
- * Requires PHP:      8.1
+ * Requires PHP:      8.2
  * Author:            Md. Razu Haolader
  * Author URI:        https://www.linkedin.com/in/md-razu-haolader/
  * License:           GPL v2 or later
@@ -29,16 +29,16 @@ declare( strict_types=1 );
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see the License URI.
  */
-if ( !defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 use MRH\BookReview\BookReview;
 
-define( 'MRHBR_FILE', __FILE__ );
-define( 'MRHBR_PATH', __DIR__ );
+define('MRHBR_FILE', __FILE__);
+define('MRHBR_PATH', __DIR__);
 /**
  * Initializes the main plugin.
  */
