@@ -7,7 +7,7 @@ declare( strict_types=1 );
  * Description:       A plugin to a custom post type and handles all the functionality related to that.
  * Version:           1.0.0
  * Requires at least: 6.1
- * Requires PHP:      8.2
+ * Requires PHP:      8.1
  * Author:            Md. Razu Haolader
  * Author URI:        https://www.linkedin.com/in/md-razu-haolader/
  * License:           GPL v2 or later
